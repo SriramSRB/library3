@@ -1,0 +1,12 @@
+{
+    "name": "library3-app",
+    "version": "1.0.0",
+    "description": "library3-app-landing-page",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
