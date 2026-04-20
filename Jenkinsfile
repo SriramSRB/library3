@@ -16,7 +16,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'library3_user', variable: 'DOCKER_PWD')]) {
                     sh 'echo "$DOCKER_PWD" | docker login -u sriramsrb --password-stdin'
-                    sh 'dpcker push sriramsrb/library3:latest'
+                    sh 'docker push sriramsrb/library3:latest'
                 }
             }
         }
