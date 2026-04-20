@@ -15,7 +15,7 @@ pipeline {
         stage ('3. Push image') {
             steps {
                 withCredentials([string(credentialsId: 'library3_user', variable: 'DOCKER_PWD')]) {
-                    sh 'echo "$DOCKER_PWD" | docker login -u sriramsrb -p password-stdin'
+                    sh 'echo "$DOCKER_PWD" | docker login -u sriramsrb --password-stdin'
                     sh 'dpcker push sriramsrb/library3:latest'
                 }
             }
